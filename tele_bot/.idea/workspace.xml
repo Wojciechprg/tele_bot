@@ -20,14 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="330add42-5e55-4544-bd94-491dd6fef1d8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/tele_bot.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../environment.env" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/tele_bot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/tele_bot.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +44,8 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager" selected="Python.main">
     <configuration name="Unnamed" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
@@ -177,6 +174,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -190,5 +188,33 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="669" y="115" key="#main/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1633548156947" />
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1633548446436">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1633548446436" />
+    <state width="1899" height="282" key="GridCell.Tab.0.bottom" timestamp="1633631187819">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1633631187819" />
+    <state width="1899" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1633627468038" />
+    <state width="1899" height="282" key="GridCell.Tab.0.center" timestamp="1633631187819">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1633631187819" />
+    <state width="1899" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1633627468038" />
+    <state width="1899" height="282" key="GridCell.Tab.0.left" timestamp="1633631187819">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1633631187819" />
+    <state width="1899" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1633627468038" />
+    <state width="1899" height="282" key="GridCell.Tab.0.right" timestamp="1633631187819">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1633631187819" />
+    <state width="1899" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1633627468038" />
+    <state x="461" y="164" key="SettingsEditor" timestamp="1633627103198">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1633627103198" />
   </component>
 </project>
