@@ -1,9 +1,13 @@
 import os
+from dotenv import load_dotenv
 import telebot
 import random
 import datetime
-#API_KEY = os.getenv('API_KEY')
-bot = telebot.TeleBot('2038787201:AAFnwe7TcHfEMEp3Jdyy4I0HQY5gFG_aeJQ')
+import requests
+from bs4 import BeautifulSoup
+load_dotenv()
+KEY = os.getenv('API_KEY')
+bot = telebot.TeleBot(KEY)
 
 
 @bot.message_handler(commands=['sosiwo'])
@@ -34,7 +38,7 @@ def picie(message):
 @bot.message_handler(commands=['gp'])
 def gp(message):
     timenow = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-    gp = "2021-10-10 15:00:00"
+    gp = "2021-10-24 21:00:00"
     start = datetime.datetime.strptime(timenow, '%Y-%m-%d %H:%M:%S')
     ends = datetime.datetime.strptime(gp, '%Y-%m-%d %H:%M:%S')
     result = ends - start
@@ -45,4 +49,22 @@ def gp(message):
         bot.reply_to(message,"Do grand prix zostało " + str(result.days) + " dni, oraz " + str(
             result.seconds // 3600) + " godzin i " + str(minuty) + " minuty")
 
-bot.polling()
+@bot.message_handler(commands=['promocja'])
+def gp(message):
+    url = 'https://www.zabka.pl/produkty/szukaj-piwa-po-kolorze-polki'
+    r = requests.get(url)
+    soup = BeautifulSoup(r.content, 'html.parser')
+    lista = soup.find_all('div', class_='grid__col -auto-height -col-sm-6 -col-md-4 -col-xl-3')
+    piwa = []
+    quote = {}
+    for x in lista:
+        quote['alkohol'] = x.img['alt']
+        quote['cena'] = (x.select_one("span.price.product__price").text[9]) + "." + (
+        x.select_one("span.price.product__price").text[10:12])
+        piwa.append(quote.copy())
+
+
+    bot.send_message(message.chat.id, str(piwa))
+
+
+bot.polling()  
