@@ -10,6 +10,7 @@ quote={}
 for x in lista:
     quote['alkohol']= x.img['alt']
     quote['cena']= (x.select_one("span.price.product__price").text[9])+"."+(x.select_one("span.price.product__price").text[10:12])
+    quote['sztuki']=x.select_one("span.badge__name").text[26]
     piwa.append(quote.copy())
 
 #kurwa = str(piwa)

@@ -1,29 +1,26 @@
+
+import datetime
+import requests
+from bs4 import BeautifulSoup
 import os
 from dotenv import load_dotenv
 import telebot
 import random
-import datetime
-import requests
-from bs4 import BeautifulSoup
+
 load_dotenv()
 KEY = os.getenv('API_KEY')
 bot = telebot.TeleBot(KEY)
 
+sosy = ('jalapeno', '1000 wysp', 'firecracker', 'algierski', 'musztarda bbq', 'bbq', 'slodkie chili', 'amerykanski',
+            'serowy', 'paprykowy sriracha', 'arabski', 'curry&mango', 'czosnkowy', 'ketchup', 'musztarda', 'remoulada',
+            'andaluzyjski', 'meksykanski')
 
 @bot.message_handler(commands=['sosiwo'])
 def sosiwo(message):
-    sosy = ['jalapeno', '1000 wysp', 'firecracker', 'algierski', 'musztarda bbq', 'bbq', 'slodkie chili', 'amerykanski',
-            'serowy', 'paprykowy sriracha', 'arabski', 'curry&mango', 'czosnkowy', 'ketchup', 'musztarda', 'remoulada',
-            'andaluzyjski', 'meksykanski']
-
     bot.reply_to(message, random.choice(sosy))
 
 @bot.message_handler(commands=['sosy'])
 def sosiwo(message):
-    sosy = ['jalapeno', '1000 wysp', 'firecracker', 'algierski', 'musztarda bbq', 'bbq', 'slodkie chili', 'amerykanski',
-            'serowy', 'paprykowy sriracha', 'arabski', 'curry&mango', 'czosnkowy', 'ketchup', 'musztarda', 'remoulada',
-            'andaluzyjski', 'meksykanski']
-
     bot.reply_to(message, random.choice(sosy)+" "+ random.choice(sosy))
 
 @bot.message_handler(commands=['hlanie'])
@@ -50,7 +47,7 @@ def gp(message):
             result.seconds // 3600) + " godzin i " + str(minuty) + " minuty")
 
 @bot.message_handler(commands=['promocja'])
-def gp(message):
+def zabka(message):
     url = 'https://www.zabka.pl/produkty/szukaj-piwa-po-kolorze-polki'
     r = requests.get(url)
     soup = BeautifulSoup(r.content, 'html.parser')
@@ -61,6 +58,7 @@ def gp(message):
         quote['alkohol'] = x.img['alt']
         quote['cena'] = (x.select_one("span.price.product__price").text[9]) + "." + (
         x.select_one("span.price.product__price").text[10:12])
+        quote['sztuki'] = x.select_one("span.badge__name").text[26]
         piwa.append(quote.copy())
 
 
